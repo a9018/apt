@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          Cache-Control:public;>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="Gold" content="width=device-width" />
+    <title>گزارش های آپارتمان</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: "customFont";
+            src: url("sitefonts/bNazanin.ttf") format("truetype");
+        }
+
+        body {
+            font-family: "customFont", Arial, sans-serif;
+            <!-- font-weight: bold; -->
+        }
+
+        a:link, a:visited {
+            background-color: green;
+            color: white;
+            padding: 14px 25px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            text-size-adjust:auto;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+
+        a {
+            width: 935px;
+        }
+
+        section:hover, section:active {
+            background-color: red;
+        }
+
+        section {
+            background-color: blue; /* #f44336 */
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 190px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body>
+    <script lang="javascript">
+        (function () {
+            if (window.localStorage) {
+                if (!localStorage.getItem('firstLoad')) {
+                    localStorage['firstLoad'] = true;
+                    window.location.reload();
+                }
+                else
+                    localStorage.removeItem('firstLoad');
+            }
+        })();
+    </script>
+    <form name="form1">
+        <section id="etl">اطلاعیه ها</section>
+        <section id="vah">واحدها</section>
+        <section id="haz">هزینه ها</section>
+        <section id="san">صندوق</section>
+    </form>
+
+    <div id="ETL">
+        <br />
+        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1401/12/15 (مدیریت جدید)</a><br /><br />
+        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/01/15 (مدیریت جدید)</a><br /><br />
+        <a href="files/a.pdf" class="ETL">اطلاعیه</a><br /><br />
+        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/03/15</a><br /><br />
+
+    </div>
+    <div id="VAH">vah</div>
+    <div id="HAZ">haz</div>
+    <div id="SAN">san</div>
+
+    <script>
+        $("div").hide();
+
+        $("#etl").click(function () {
+            $("div").hide();
+            if ($("#ETL").first().is(":hidden")) {
+                $("#ETL").slideDown("slow");
+            } else {
+                $("#ETL").hide();
+            }
+        });
+
+        $("#vah").click(function () {
+            $("div").hide();
+            if ($("#VAH").first().is(":hidden")) {
+                $("#VAH").slideDown("slow");
+            } else {
+                $("#VAH").hide();
+            }
+        });
+
+        $("#haz").click(function () {
+            $("div").hide();
+            if ($("#HAZ").first().is(":hidden")) {
+                $("#HAZ").slideDown("slow");
+            } else {
+                $("#HAZ").hide();
+            }
+        });
+
+        $("#san").click(function () {
+            $("div").hide();
+            if ($("#SAN").first().is(":hidden")) {
+                $("#SAN").slideDown("slow");
+            } else {
+                $("#SAN").hide();
+            }
+        });
+
+    </script>
+
+
+
+    <script type="text/javascript" src="scripts/main.js" charset="UTF-8"></script>
+</body>
+</html>

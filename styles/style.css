@@ -1,0 +1,67 @@
+﻿.helpTable {
+    column-width: 950px;
+}
+.important {
+    background-color:aquamarine;
+}
+html {
+    font-size: 35px; /* px means "pixels": the base font size is now 10 pixels high */
+    color: blue;
+    background-color: #00539f;
+    direction: rtl; 
+}
+
+table {
+    text-align: right;
+}
+th {
+    border-bottom: 1px solid;
+    border-bottom-color: lightblue;
+    background-color: #00539f;
+    color:yellow;
+}
+th, td {
+    column-width: 450px;
+    padding: 20px 40px 0 0;
+}
+td {
+    background-color: white;
+    border-bottom: 1px solid;
+    border-bottom-color: #00539f;
+}
+
+INPUT {
+    /* padding: 0 100px 0 0; */
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    padding: 20px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
