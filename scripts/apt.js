@@ -83,14 +83,14 @@ function applayShr() {
     var table,tableCst,tableSan;
     var tableTh1 = "<tr><th>تاریخ ها</th>";
     var tableTh2 ="<tr><th>عنوان ها</th><th>بدهـکار(تومان)</th>";
-    var tableTd = new initArray("<tr><td>واحد 1</td>", "<tr><td>واحد 2</td>", "<tr><td>واحد 3</td>",
+    var tableTd = new initArray("<tr><td id='vahed'>واحد 1</td>", "<tr><td>واحد 2</td>", "<tr><td>واحد 3</td>",
         "<tr><td>واحد 4</td>", "<tr><td>واحد 5</td>", "<tr><td>واحد 6</td>", "<tr><td>واحد 7</td>",
         "<tr><td>واحد 8</td>", "<tr><td>واحد 9</td>", "<tr><td>واحد 10</td>");
     var tableTdShr = new initArray("", "", "", "", "", "", "", "", "", "");
     var vahedBed = new initArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     var sumBeds=0;
     var today = new Date();
-    var thCst = "<tr><th>تاریخ</th><th>عنوان</th><th>مبلغ</th><th>جمع کل(تومان)</th></tr>";
+    var thCst = "<tr><th>تاریخ</th><th>عنوان</th><th>مبلغ</th></tr>";
     var tdCst = "";
     var currentShr;
     var helpDate;
@@ -146,7 +146,7 @@ function applayShr() {
             
             for (j = 0; j < apt[i]; j++) {
                 usFormat = new Intl.NumberFormat().format(apt[i + j + 3]);
-                tdCst += "<tr><td>" + helpDate + "</td><td>" + Titles[apt[i + j + 1]] + "</td><td>" + usFormat + helpString + "</td></tr>";
+                tdCst += "<tr><td>" + helpDate + "</td><td>" + Titles[apt[i + j + 1]] + "</td><td>" + usFormat + "</td></tr>";
                 helpString = "";
                 sumCst += Number(apt[i + j + 3]);
             }
@@ -171,11 +171,12 @@ function applayShr() {
     document.getElementById("tshr").innerHTML = table;
  
     usFormat = new Intl.NumberFormat().format(sumCst);
-    tableCst = thCst + tdCst.replace("sumCast", usFormat);;
+    tdCst += "<tr><th>جـمع کل</th><td>" + usFormat + "</td ><th>(تومان)</th></tr >";
+    tableCst = thCst + tdCst;
     document.getElementById("tcst").innerHTML = tableCst;
 
     usFormat = new Intl.NumberFormat().format(remain1401);
-    tableSan = "<tr><th>مانده صندوق 1401</th><td>" + usFormat +"</td><th>تومان</th></tr>";
+    tableSan = "<tr><th>مانده صندوق 1401</th><td>" + usFormat +"</td></tr>";
     usFormat = new Intl.NumberFormat().format(sumShr);
     tableSan += "<tr><th>پرداخت واحدها</th><td>" + usFormat + "</td></tr>";
 
@@ -188,7 +189,7 @@ function applayShr() {
     usFormat = new Intl.NumberFormat().format(sumCst);
     tableSan += "<tr><th>جمع هزینه ها</th><td>" + usFormat + "</td></tr>";
     usFormat = new Intl.NumberFormat().format(remain1401 + sumShr - sumCst - sumBeds);
-    tableSan += "<tr><th>مانده موجود " + todayDate+"</th><td>" + usFormat + "</td></tr>";
+    tableSan += "<tr><th>مانده موجود " + todayDate + "</th><td>" + usFormat + "</td><th>(تومان)</th></tr>";
 
     document.getElementById("tsan").innerHTML = tableSan;
  
