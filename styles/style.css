@@ -31,10 +31,10 @@ td {
 th {
     background-color: #7c0f65;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
 }
 td {
-    font-size: 35px;
+    font-size: 55px;
 }
 tr:nth-child(even) {
     background-color: #7ce2af
@@ -44,7 +44,7 @@ tr:nth-child(odd) {
 }
 .bed {
     color: red;
-    font-weight: bold;
+/*    font-weight: bold;  */
 }
 
 
