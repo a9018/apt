@@ -14,9 +14,11 @@ html {
 
 table {
     border-collapse: collapse;
-/*    width: 100%;*/
+    width: 100%;
     direction: rtl;
- 
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 th,
@@ -34,7 +36,7 @@ th {
     font-size: 40px;
 }
 td {
-    font-size: 55px;
+    font-size: 45px;
 }
 tr:nth-child(even) {
     background-color: #7ce2af
@@ -73,7 +75,7 @@ li {
     border: 5px solid black;
 }
 #bodyshr {
-    width: 10000px;
+    width: 1000px;
     margin: 0 auto;
     background-color: darksalmon;
     padding: 20px 20px 20px 20px;
