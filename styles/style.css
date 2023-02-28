@@ -126,8 +126,7 @@ section:hover, section:active {
     display: inline-block;
     width: 190px;
     font-size: 50px;
-    font-weight: bold;
-}
+ }
 
 .myBold {
  color: yellow;
