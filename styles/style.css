@@ -31,10 +31,10 @@ td {
 th {
     background-color: #7c0f65;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
 }
 td {
-    font-size: 25px;
+    font-size: 35px;
 }
 tr:nth-child(even) {
     background-color: #7ce2af
