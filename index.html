@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          Cache-Control:public;>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="Gold" content="width=device-width" />
+    <title>گزارش های آپارتمان</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: "customFont";
+            src: url("sitefonts/bNazanin.ttf") format("truetype");
+        }
+
+        body {
+            font-family: "customFont", Arial, sans-serif;
+            /*            font-weight: bold;   */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+</head>
+<body id="home">
+    <script lang="javascript">
+        (function () {
+            if (window.localStorage) {
+                if (!localStorage.getItem('firstLoad')) {
+                    localStorage['firstLoad'] = true;
+                    window.location.reload();
+                }
+                else
+                    localStorage.removeItem('firstLoad');
+            }
+        })();
+    </script>
+    <form name="form1">
+        <section id="etl" class="myMenu">اطلاعیه</section>
+        <section id="shr" class="myMenu">شارژ</section>
+        <section id="haz" class="myMenu">هزینه</section>
+        <section id="san" class="myMenu">صندوق</section>
+    </form>
+
+    <div id="ETL">
+        <br />
+        <a href="files/Etl-14011215.pdf" class="ETL">مورخ 1401/12/15: <span class="myBold">مدیریت جدید</span> و تغییر <span class="myBold">شماره کارت</span> واریزی به صندوق</a><br /><br />
+        <!--        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/01/15 (مدیریت جدید)</a><br /><br />
+                <a href="files/a.pdf" class="ETL">اطلاعیه</a><br /><br />
+                <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/03/15</a><br /><br />
+        -->
+    </div>
+    <div id="SHR">
+        <br>
+        <table id="tshr"></table>
+    </div>
+    <div id="HAZ">
+        <br>
+        <table id="tcst"></table>
+    </div>
+    <div id="SAN">
+        <br>
+        <table id="tsan"></table>
+    </div>
+
+    <script>
+        $("div").hide();
+
+        $("#etl").click(function () {
+            $('body').attr('id', 'home');
+
+            $("div").hide();
+            if ($("#ETL").first().is(":hidden")) {
+                $("#ETL").slideDown("slow");
+            } else {
+                $("#ETL").hide();
+            }
+        });
+
+        $("#shr").click(function () {
+            $('body').attr('id', 'home');
+
+            $("div").hide();
+            if ($("#SHR").first().is(":hidden")) {
+                $("#SHR").slideDown("slow");
+            } else {
+                $("#SHR").hide();
+            }
+            applayShr();
+            $("#tshr").fadeTo(1000, 0);
+            $("#tshr").fadeTo(1000, 1);
+
+        });
+
+        $("#haz").click(function () {
+            $('body').attr('id', 'home');
+
+            $("div").hide();
+            if ($("#HAZ").first().is(":hidden")) {
+                $("#HAZ").slideDown("slow");
+            } else {
+                $("#HAZ").hide();
+            }
+            applayShr();
+            $("#tcst").fadeTo(1000, 0);
+            $("#tcst").fadeTo(1000, 1);
+
+        });
+
+        $("#san").click(function () {
+            $('body').attr('id', 'home');
+
+            $("div").hide();
+            if ($("#SAN").first().is(":hidden")) {
+                $("#SAN").slideDown("slow");
+            } else {
+                $("#SAN").hide();
+            }
+            applayShr();
+            $("#tsan").fadeTo(1000, 0);
+            $("#tsan").fadeTo(1000, 1);
+
+        });
+
+
+    </script>
+
+
+
+    <script type="text/javascript" src="scripts/apt.js" charset="UTF-8"></script>
+</body>
+</html>

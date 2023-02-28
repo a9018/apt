@@ -1,0 +1,132 @@
+﻿.helpTable {
+    /*column-width: 950px;*/
+}
+.important {
+    background-color:aquamarine;
+}
+html {
+    font-size: 35px; /* px means "pixels": the base font size is now 10 pixels high */
+    color: blue;
+    background-color: #00539f; /*#00539f;*/
+    direction: rtl;
+}
+
+
+table {
+    border-collapse: collapse;
+/*    width: 100%;*/
+    direction: rtl;
+ 
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border: groove;
+    border-width: 3px;
+        text-align: center;
+}
+
+th {
+    background-color: #7c0f65;
+    color: white;
+    font-size: 20px;
+}
+td {
+    font-size: 25px;
+}
+tr:nth-child(even) {
+    background-color: #7ce2af
+}
+tr:nth-child(odd) {
+    background-color: white
+}
+.bed {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+INPUT {
+    /* padding: 0 100px 0 0; */
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+#home {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: darksalmon; 
+    padding: 20px 20px 20px 20px;
+    border: 5px solid black;
+}
+#bodyshr {
+    width: 10000px;
+    margin: 0 auto;
+    background-color: darksalmon;
+    padding: 20px 20px 20px 20px;
+    border: 5px solid black;
+}
+
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+/***********************************************/
+a:link, a:visited {
+    background-color: green;
+    color: white;
+    padding: 14px 25px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    text-size-adjust: auto;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+a {
+    width: 935px;
+}
+
+section:hover, section:active {
+    background-color: red;
+}
+
+.myMenu {
+    background-color: blue; /* #f44336 */
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 190px;
+    font-size: 50px;
+}
+
+.myBold {
+ color: yellow;
+ font-weight:bolder;
+ }
