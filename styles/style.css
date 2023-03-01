@@ -19,6 +19,7 @@ table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+     box-shadow: 10px 20px 30px blue;
 }
 
 th,
