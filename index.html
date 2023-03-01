@@ -15,12 +15,13 @@
             src: url("sitefonts/bNazanin.ttf") format("truetype");
         }
 
-        body {
+        body, #ok {
             font-family: "customFont", Arial, sans-serif;
             /*            font-weight: bold;   */
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body id="home">
     <script lang="javascript">
@@ -42,6 +43,12 @@
         <section id="san" class="myMenu">صندوق</section>
     </form>
 
+    <div id="passCode">
+        <label for="pass">کلمه عبور:</label>
+        <input type="password" id="pass" name="password">
+        <button id="ok">تایید</button>
+    </div>
+
     <div id="ETL">
         <br />
         <a href="files/Etl-14011215.pdf" class="ETL">مورخ 1401/12/15: <span class="myBold">مدیریت جدید</span> و تغییر <span class="myBold">شماره کارت</span> واریزی به صندوق</a><br /><br />
@@ -51,7 +58,7 @@
         -->
     </div>
     <div id="SHR">
-        <br>
+        <img src="images\inf.png" alt="*****">
         <table id="tshr"></table>
     </div>
     <div id="HAZ">
@@ -61,6 +68,11 @@
     <div id="SAN">
         <br>
         <table id="tsan"></table>
+    </div>
+
+    <div id="VAH">
+        <br>
+        <table id="tvah"></table>
     </div>
 
     <script>
@@ -89,6 +101,7 @@
             applayShr();
             $("#tshr").fadeTo(1000, 0);
             $("#tshr").fadeTo(1000, 1);
+
 
         });
 
@@ -122,18 +135,31 @@
 
         });
 
- //       $("#vahed").click(function () {
-   //         $('body').attr('id', 'home');
-     //       <input type="password" id='input' />
+        $("img").click(function () {
 
-//            $("div").hide();
-//            if ($("#ETL").first().is(":hidden")) {
-//                $("#ETL").slideDown("slow");
-//            } else {
-//                $("#ETL").hide();
-//            }
-       // });
+            if ($("#passCode").first().is(":hidden")) {
+                $("#passCode").slideDown("slow");
+                $("img").fadeTo(1000, 0.3);
+            } else {
+                $("#passCode").hide();
+                $("img").fadeTo(1000, 1);
+            }
+        });
 
+        $("#ok").click(function () {
+            if (document.getElementById("pass").value == crypt.decrypt(cipher)) {
+//                alert(document.getElementById("pass").value);
+                $("#passCode").hide();
+                $("div").hide();
+                $("#VAH").slideDown("slow");
+                $("img").fadeTo(1000, 1);
+                $("#tvah").fadeTo(1000, 0);
+                $("#tvah").fadeTo(1000, 1);
+            }
+            else {
+                alert("رمز نادرست است!");
+            }
+        });
 
     </script>
 

@@ -80,10 +80,10 @@ for (i = 0; i < x.length; i++) {
  
 function applayShr() {
     var i, j, k, nShr;
-    var table,tableCst,tableSan;
+    var table,tableCst,tableSan,tableVah;
     var tableTh1 = "<tr><th>تاریخ ها</th>";
     var tableTh2 ="<tr><th>عنوان ها</th><th>بدهـکار(تومان)</th>";
-    var tableTd = new initArray("<tr><td id='vahed'>واحد 1</td>", "<tr><td>واحد 2</td>", "<tr><td>واحد 3</td>",
+    var tableTd = new initArray("<tr><td>واحد 1</td>", "<tr><td>واحد 2</td>", "<tr><td>واحد 3</td>",
         "<tr><td>واحد 4</td>", "<tr><td>واحد 5</td>", "<tr><td>واحد 6</td>", "<tr><td>واحد 7</td>",
         "<tr><td>واحد 8</td>", "<tr><td>واحد 9</td>", "<tr><td>واحد 10</td>");
     var tableTdShr = new initArray("", "", "", "", "", "", "", "", "", "");
@@ -102,7 +102,23 @@ function applayShr() {
      
 
     if (applaiedShr) { return (applaiedShr); }
-//    alert("Arman");
+
+    tableVah = "<tr><th>واحد</th><th>مشخصات</th><th>شماره تماس</th><th>شماره کارت</th></tr>";
+    tableVah += "<tr><td>واحد1</td><td>---</td><td>---</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد2</td><td>---</td><td>---</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد3</td><td>---</td><td>---</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد4</td><td>---</td><td>---</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد5</td><td>آقای ضابط</td><td>09127210512</td><td>5859-8311-2672-9861</td></tr>";
+    tableVah += "<tr><td>واحد6</td><td>آقای الهیاری</td><td>---</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد7</td><td>آقای محمدی</td><td>09398192975</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد8</td><td>آقای نظام آبادی</td><td>---</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد9</td><td>آقای کاظمی</td><td>09302022452</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد10</td><td>خانم کاظمی</td><td>09912108643</td><td>---</td></tr>";
+
+    document.getElementById("tvah").innerHTML = tableVah;
+
+
+
 
     calcul_solar_date(today);
     if (solar_year > 99) {
@@ -244,4 +260,39 @@ function calcul_solar_date(today_date) {
 
 }
 
-/* End Solar Date***********************************************************************/
+/* Simple Javascript Password***********************************************************************/
+var cipher = "U2FsdGVkX19Lw1A6D2a/0hwLO4RnQyl1gYsA3Meuu9E=";
+
+    //<!--(A) LOAD CRYPTO JS LIBRARY-- >
+    //< !--https://cryptojs.gitbook.io/docs/ -->
+    //< !--https://cdnjs.com/libraries/crypto-js -->
+    // (B) ENCRYPT & DECRYPT FUNCTIONS
+    var crypt = {
+      // (B1) THE SECRET KEY
+      secret : "CIPHERKEY",
+
+      // (B2) ENCRYPT
+      encrypt : clear => {
+        var cipher = CryptoJS.AES.encrypt(clear, crypt.secret);
+        return cipher.toString();
+      },
+
+      // (B3) DECRYPT
+      decrypt : cipher => {
+        var decipher = CryptoJS.AES.decrypt(cipher, crypt.secret);
+        return decipher.toString(CryptoJS.enc.Utf8);
+      }
+    };
+
+    // (C) TEST
+    // (C1) ENCRYPT CLEAR TEXT
+//    var cipher = crypt.encrypt("4321");
+  //      console.log(cipher);
+    //    alert(cipher);
+
+    // (C2) DECRYPT CIPHER TEXT
+    var decipher = crypt.decrypt(cipher);
+//        console.log(decipher);
+   //     alert(decipher);
+
+/* End Simple Javascript Password***********************************************************************/

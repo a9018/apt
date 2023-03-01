@@ -126,9 +126,42 @@ section:hover, section:active {
     display: inline-block;
     width: 190px;
     font-size: 50px;
- }
+}
 
 .myBold {
  color: yellow;
  font-weight:bolder;
  }
+.active {
+    /*displays pop-up when "active" class is present*/
+    visibility: visible;
+    
+}
+
+button {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    margin: .20rem;
+    font-size: 1rem;
+    color: blue; /*#666666;*/
+    background: #ffffff;
+    border: 1px solid #666666;
+}
+
+    button:hover {
+        border: 1px solid #666666;
+        background: #666666;
+        color: #ffffff;
+    }
+
+img {
+    height: 50px;
+    width: 50px;
+    direction:rtl;
+}
+#pass {
+    font-size: 20px;
+    color: blue;
+}
+
