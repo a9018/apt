@@ -13,9 +13,9 @@ function initArray() {
         this[i + 1] = initArray.arguments[i]
 }
 
-var Titles = new initArray("شـارژ", "---", "3", "4", "5", "6", "7", "8", "9","آب", "برق", "آسانسور", "نظافت", "پمپ آب");
+var Titles = new initArray("شـارژ", "هزینه2", "3", "4", "5", "6", "7", "8", "---","آب", "برق", "آسانسور", "نظافت", "پمپ آب");
 var solarMounth = new initArray("فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند");
-var vahedBes = new initArray("0", "0", "0", "0", "0", "0", "0", "0", "0", "0",);
+var vahedBes = new initArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var num = 0;
 
 
@@ -92,28 +92,33 @@ function applayShr() {
     var today = new Date();
     var thCst = "<tr><th>تاریخ</th><th>عنوان</th><th>مبلغ</th></tr>";
     var tdCst = "";
-    var currentShr;
+    var currentShr = new initArray(0, 0, 0, 0, 0);
     var helpDate;
     var sumCst = 0;
     var sumShr = 0;
-    var helpString = "</td ><td>sumCast";
-    var remain1401 = 2600000;
+    var remain1401 = 3295994.7;
     var todayDate;
      
 
     if (applaiedShr) { return (applaiedShr); }
 
-    tableVah = "<tr><th>واحد</th><th>مشخصات</th><th>شماره تماس</th><th>شماره کارت</th></tr>";
-    tableVah += "<tr><td>واحد1</td><td>---</td><td>---</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد2</td><td>---</td><td>---</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد3</td><td>---</td><td>---</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد4</td><td>---</td><td>---</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد5</td><td>آقای ضابط</td><td>09127210512</td><td>5859-8311-2672-9861</td></tr>";
-    tableVah += "<tr><td>واحد6</td><td>آقای الهیاری</td><td>---</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد7</td><td>آقای محمدی</td><td>09398192975</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد8</td><td>آقای نظام آبادی</td><td>---</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد9</td><td>آقای کاظمی</td><td>09302022452</td><td>---</td></tr>";
-    tableVah += "<tr><td>واحد10</td><td>خانم کاظمی</td><td>09912108643</td><td>---</td></tr>";
+    tableVah = "<tr><th>واحد</th><th>مشخصات</th><th>شماره تماس</th><th>شماره کارت-سایر</th></tr>";
+    tableVah += "<tr><td>واحد1</td><td>آقای نیکفر</td><td>0935-3295052</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد2</td><td>آقای زهدی</td><td>0912-4776088</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد3</td><td>آقایان بصیری(مالک)-انتصاری(مستاجر)</td><td>0912-5190161/0912-3279750</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد4</td><td>آقای حاجی پور</td><td>0912-1143829</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد5</td><td>آقای ضابط</td><td>0912-7210512</td><td>5859-8311-2672-9861</td></tr>";
+    tableVah += "<tr><td>واحد6</td><td>آقای الهیاری</td><td>0912-3585653</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد7</td><td>آقایان دهاقین(مالک)-محمدی(مستاجر)</td><td>0912-6274815/0919-1250581-0912-6231794</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد8</td><td>آقای نظام آبادی</td><td>0912-8044606</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد9</td><td>آقای کاظمی</td><td>0930-2022452</td><td>---</td></tr>";
+    tableVah += "<tr><td>واحد10</td><td>خانم کاظمی</td><td>099-12108643</td><td>---</td></tr>";
+    tableVah += "<tr><td>درب برقی</td><td>آقای مهربانی</td><td>0912-7926168</td><td>---</td></tr>";
+    tableVah += "<tr><td>پمپ آب</td><td>آقای گنجعلی</td><td>0912-1002328</td><td>---</td></tr>";
+    tableVah += "<tr><td>آسانسور</td><td>آقای خداپرست</td><td>0919-8120764</td><td>---</td></tr>";
+    tableVah += "<tr><td>آسانسور</td><td>شرکت ایمن آسانبر</td><td>0919-3166752/77274428</td><td>---</td></tr>";
+    tableVah += "<tr><td>نظافت ساختمان</td><td>آقای دوستی</td><td>0919-6384954</td><td>---</td></tr>";
+    tableVah += "<tr><td>آنتن مرکزی</td><td>آقای بیاتانی</td><td>0912-2939531</td><td>---</td></tr>";
 
     document.getElementById("tvah").innerHTML = tableVah;
 
@@ -134,13 +139,13 @@ function applayShr() {
     for (i = 0; i < apt.length; i++) {
         if (apt[i] != -1) {
 
-            currentShr = shrMoney(apt[i]);
-//            vahedBed[i + 1] += shrMoney(apt[i]);
+
             helpDate = solarMounth[apt[i] % 100] + "-" + (apt[i] / 100 >> 0);
 
             for (j = 0; j < apt[i + 1]; j++) {
                 tableTh1 += "<th>" + helpDate  + "</th>";
-                tableTh2 += "<th>" + Titles[apt[i+j+2]] + "</th>";
+                tableTh2 += "<th>" + Titles[apt[i + j + 2]] + "</th>";
+                currentShr[j] = shrMoney(apt[i] * apt[i + j + 2]);
             }
             i = i + j + 2;
             nShr = apt[i]/10;
@@ -152,7 +157,7 @@ function applayShr() {
                     }
                     else {
                         tableTdShr[j] += "<td>" + apt[i] + "</td>";
-                        vahedBed[j] += currentShr - apt[i];
+                        vahedBed[j] += currentShr[k] - apt[i];
                         sumShr += Number(apt[i]);
                     }
                 }
@@ -161,10 +166,11 @@ function applayShr() {
             i++;
             
             for (j = 0; j < apt[i]; j++) {
-                usFormat = new Intl.NumberFormat().format(apt[i + j + 3]);
-                tdCst += "<tr><td>" + helpDate + "</td><td>" + Titles[apt[i + j + 1]] + "</td><td>" + usFormat + "</td></tr>";
-                helpString = "";
-                sumCst += Number(apt[i + j + 3]);
+                if (apt[i + j + 3] > 0) {
+                    usFormat = new Intl.NumberFormat().format(apt[i + j + 3]);
+                    tdCst += "<tr><td>" + helpDate + "</td><td>" + Titles[apt[i + j + 1]] + "</td><td>" + usFormat + "</td></tr>";
+                    sumCst += Number(apt[i + j + 3]);
+                }
             }
             i += apt[i] * 2 + 1;
 
@@ -215,13 +221,19 @@ function applayShr() {
 
 function shrMoney(shrDate) {
     var result = 0;
-    switch (shrDate) {
-        case shrDate > 140900:
+
+    switch (true) {
+        case shrDate < 280402:
+            result = 150000;
+            break;
+        case shrDate == 280406: // Test
             result = 0;
             break;
+
         default:
-            result = 150000;
+            result = 0;
     }
+
     return(result)
 }
 

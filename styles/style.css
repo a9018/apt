@@ -19,7 +19,7 @@ table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
-     box-shadow: 10px 20px 30px blue;
+    box-shadow: 10px 20px 30px blue;
 }
 
 th,
@@ -94,6 +94,7 @@ h1 {
 img {
     display: block;
     margin: 0 auto;
+  
 }
 /***********************************************/
 a:link, a:visited {
