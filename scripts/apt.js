@@ -148,7 +148,7 @@ function applayShr() {
             else{
                 sumShrAct = 0;
             }
-            alert(sumShrAct);
+     
 
             for (j = 0; j < apt[i + 1]; j++) {
                 tableTh1 += "<th>" + helpDate  + "</th>";
