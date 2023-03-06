@@ -12,7 +12,7 @@
       <shr>150000</shr>
     </v03>
     <v04>
-      <shr>150000</shr>
+      <shr>9</shr>
     </v04>
     <v05>
       <shr>150000</shr>
@@ -32,7 +32,7 @@
     <v10>
       <shr>150000</shr>
     </v10>
-    <c_cod>9</c_cod>
-    <cst>0</cst>
+    <c_cod>10</c_cod>
+    <cst>298400</cst>
   </date>
 </apt>

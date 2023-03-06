@@ -174,10 +174,10 @@ function applayShr() {
             i++;
             
             for (j = 0; j < apt[i]; j++) {
-                if (apt[i + j + 3] > 0) {
-                    usFormat = new Intl.NumberFormat().format(apt[i + j + 3]);
+                if (apt[i + j + 1] > 0) {
+                    usFormat = new Intl.NumberFormat().format(apt[i + j + 1 + apt[i]]);
                     tdCst += "<tr><td>" + helpDate + "</td><td>" + Titles[apt[i + j + 1]] + "</td><td>" + usFormat + "</td></tr>";
-                    sumCst += Number(apt[i + j + 3]);
+                    sumCst += Number(apt[i + j + 1 + apt[i]]);
                 }
             }
             i += apt[i] * 2 + 1;
