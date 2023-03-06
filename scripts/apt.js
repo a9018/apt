@@ -96,6 +96,7 @@ function applayShr() {
     var helpDate;
     var sumCst = 0;
     var sumShr = 0;
+    var sumShrAct = 0;
     var remain1401 = 3295994.7;
     var todayDate;
      
@@ -141,6 +142,13 @@ function applayShr() {
 
 
             helpDate = solarMounth[apt[i] % 100] + "-" + (apt[i] / 100 >> 0);
+            if (solar_year * 100 + solar_month >= apt[i]) {
+                sumShrAct = 1;
+            }
+            else{
+                sumShrAct = 0;
+            }
+            alert(sumShrAct);
 
             for (j = 0; j < apt[i + 1]; j++) {
                 tableTh1 += "<th>" + helpDate  + "</th>";
@@ -158,7 +166,7 @@ function applayShr() {
                     else {
                         tableTdShr[j] += "<td>" + apt[i] + "</td>";
                         vahedBed[j] += currentShr[k] - apt[i];
-                        sumShr += Number(apt[i]);
+                        sumShr += Number(apt[i]) * sumShrAct;
                     }
                 }
             }
