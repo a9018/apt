@@ -219,7 +219,7 @@ function applayShr() {
     usFormat = new Intl.NumberFormat().format(sumCst);
     tableSan += "<tr><th>جمع هزینه ها</th><td>" + usFormat + "</td></tr>";
     usFormat = new Intl.NumberFormat().format(remain1401 + sumShr - sumCst - sumBeds);
-    tableSan += "<tr><th>مانده موجود " + todayDate + "</th><td>" + usFormat + "</td><th>(تومان)</th></tr>";
+    tableSan += "<tr><th>موجودی " + todayDate + "</th><td>" + usFormat + "</td><th>(تومان)</th></tr>";
 
     document.getElementById("tsan").innerHTML = tableSan;
  
