@@ -129,7 +129,7 @@ function applayShr() {
     tableVah += "<td>آقای خداپرست</td><td>0919-8120764</td><td>---</td></tr>";
     tableVah += "<td>شرکت ایمن آسانبر</td><td>0919-3166752/77274428</td><td>---</td></tr>";
 
-    tableVah += "<tr><th>نظافت ساختمان</th><td>آقای دوستی</td><td>0919-6384954</td><td>---</td></tr>";
+    tableVah += "<tr><th>نظافت ساختمان</th><td>آقای دوستی</td><td>0919-6384954</td><td>6274-1211-9193-8711</td></tr>";
     tableVah += "<tr><th>آنتن مرکزی</th><td>آقای بیاتانی</td><td>0912-2939531</td><td>---</td></tr>";
 
     document.getElementById("tvah").innerHTML = tableVah;
