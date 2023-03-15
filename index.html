@@ -88,6 +88,7 @@
             } else {
                 $("#ETL").hide();
             }
+            $("img").css("margin-right", "450px");
         });
 
         $("#shr").click(function () {
@@ -103,7 +104,7 @@
             $("#tshr").fadeTo(1000, 0);
             $("#tshr").fadeTo(1000, 1);
             $("img").fadeTo(1000, 1);
-
+            $("img").css("margin-right", "450px");
         });
 
         $("#haz").click(function () {
@@ -118,7 +119,7 @@
             applayShr();
             $("#tcst").fadeTo(1000, 0);
             $("#tcst").fadeTo(1000, 1);
-
+            $("img").css("margin-right", "450px");
         });
 
         $("#san").click(function () {
@@ -133,16 +134,19 @@
             applayShr();
             $("#tsan").fadeTo(1000, 0);
             $("#tsan").fadeTo(1000, 1);
-
+            $("img").css("margin-right", "450px");
         });
 
         $("img").click(function () {
-
+            
             if ($("#passCode").first().is(":hidden")) {
+                $("img").animate({ "margin-right": '-=450' }, 1000);
                 $("#passCode").slideDown("slow");
                 $("img").fadeTo(1000, 0.3);
             } else {
-                $("#passCode").hide();
+                $("img").animate({ "margin-right": '+=450' }, 1000);
+//                $("#passCode").slideUp("slow");
+                $("#passCode").hide("slow");
                 $("img").fadeTo(1000, 1);
             }
         });
@@ -156,6 +160,7 @@
                 $("img").fadeTo(1000, 1);
                 $("#tvah").fadeTo(1000, 0);
                 $("#tvah").fadeTo(1000, 1);
+                $("img").animate({ "margin-right": '+=450' }, 1000);
             }
             else {
                 alert("رمز نادرست است!");
