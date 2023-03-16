@@ -36,6 +36,9 @@
             }
         })();
     </script>
+    <div  id="update">
+        << برای بازدید تغییرات لطفا صفحه را بروز نمایید >>
+    </div>
     <form name="form1">
         <section id="etl" class="myMenu">اطلاعیه</section>
         <section id="shr" class="myMenu">شارژ</section>
@@ -52,7 +55,7 @@
 
     <div id="ETL">
         <br />
-        <a href="files/Etl-14011216.pdf" class="ETL">مورخ 1401/12/16: <span class="myBold">مدیریت جدید</span> و تغییر <span class="myBold">شماره کارت</span> واریزی به صندوق</a><br /><br />
+        <a href="files/Etl-14011216.pdf">مورخ 1401/12/16: <span class="myBold">مدیریت جدید</span> و تغییر <span class="myBold">شماره کارت</span> واریزی به صندوق</a><br /><br />
         <!--        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/01/15 (مدیریت جدید)</a><br /><br />
                 <a href="files/a.pdf" class="ETL">اطلاعیه</a><br /><br />
                 <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/03/15</a><br /><br />
@@ -78,6 +81,14 @@
 
     <script>
         $("div").hide();
+        if ($("#update").first().is(":hidden")) {
+            $("#update").slideDown("slow");
+        }
+        window.setTimeout(function () {
+            $("#update").slideUp("slow");
+        }, 5000);
+
+
 
         $("#etl").click(function () {
             $('body').attr('id', 'home');
