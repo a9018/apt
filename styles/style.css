@@ -1,17 +1,9 @@
-﻿.helpTable {
-    /*column-width: 950px;*/
-}
-.important {
-    background-color:aquamarine;
-}
-html {
+﻿html {
     font-size: 35px; /* px means "pixels": the base font size is now 10 pixels high */
     color: blue;
     background-color: #00539f; /*#00539f;*/
     direction: rtl;
 }
-
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -21,7 +13,6 @@ table {
     white-space: nowrap;
     box-shadow: 10px 20px 30px blue;
 }
-
 th,
 td {
     text-align: left;
@@ -30,7 +21,6 @@ td {
     border-width: 3px;
         text-align: center;
 }
-
 th {
     background-color: #7c0f65;
     color: white;
@@ -50,24 +40,6 @@ tr:nth-child(odd) {
 /*    font-weight: bold;  */
 }
 
-
-
-INPUT {
-    /* padding: 0 100px 0 0; */
-}
-
-h1 {
-    font-size: 60px;
-    text-align: center;
-}
-
-p,
-li {
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-}
-
 #home {
     width: 1000px;
     margin: 0 auto;
@@ -75,27 +47,7 @@ li {
     padding: 20px 20px 20px 20px;
     border: 5px solid black;
 }
-#bodyshr {
-    width: 1000px;
-    margin: 0 auto;
-    background-color: darksalmon;
-    padding: 20px 20px 20px 20px;
-    border: 5px solid black;
-}
 
-
-h1 {
-    margin: 0;
-    padding: 20px 0;
-    color: #00539f;
-    text-shadow: 3px 3px 1px black;
-}
-
-img {
-    display: block;
-    margin: 0 auto;
-  
-}
 /***********************************************/
 a:link, a:visited {
     background-color: green;
@@ -158,12 +110,23 @@ button {
     }
 
 img {
+    display: block;
     height: 100px;
     width: 100px;
-    direction:rtl;
+    /*   direction:rtl;*/
+    margin-left: auto;
+    margin-right: auto;
 }
 #pass {
     font-size: 40px;
     color: blue;
+}
+#update {
+    color: blue;
+    background-color: yellow;
+    font-size: 1.5em;
+    text-align:center;
+    width: 985px;
+    font-weight:bold;
 }
 
