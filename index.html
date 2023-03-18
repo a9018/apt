@@ -36,8 +36,8 @@
             }
         })();
     </script>
-    <div  id="update">
-        << برای بازدید تغییرات لطفا صفحه را بروز نمایید >>
+    <div  id="start">
+        << گزارش های آپارتمان >>
     </div>
     <form name="form1">
         <section id="etl" class="myMenu">اطلاعیه</section>
@@ -81,13 +81,16 @@
 
     <script>
         $("div").hide();
-        if ($("#update").first().is(":hidden")) {
-            $("#update").slideDown("slow");
+
+        if ($("#start").first().is(":hidden")) {
+            $("#start").slideDown("slow");
         }
         window.setTimeout(function () {
-            $("#update").slideUp("slow");
+            $("#start").slideUp("slow");
         }, 5000);
-
+        function getfocus() {
+            document.getElementById("etl").focus();
+        }
 
 
         $("#etl").click(function () {

@@ -3,6 +3,7 @@
     color: blue;
     background-color: #00539f; /*#00539f;*/
     direction: rtl;
+  
 }
 table {
     border-collapse: collapse;
@@ -43,7 +44,7 @@ tr:nth-child(odd) {
 #home {
     width: 1000px;
     margin: 0 auto;
-    background-color: darksalmon; 
+    background-color: darksalmon;
     padding: 20px 20px 20px 20px;
     border: 5px solid black;
 }
@@ -121,11 +122,12 @@ img {
     font-size: 40px;
     color: blue;
 }
-#update {
-   color: yellow;
+#start {
+    color: yellow;
     background-color: purple;
     font-size: 1.4em;
-    text-align:center;
+    text-align: center;
     width: 985px;
- }
+/*    font-weight: bold;*/
+}
 
