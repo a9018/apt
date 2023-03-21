@@ -13,7 +13,7 @@ function initArray() {
         this[i + 1] = initArray.arguments[i]
 }
 
-var Titles = new initArray("شـارژ", "هزینه2", "3", "4", "5", "6", "7", "8", "---","آب", "برق", "آسانسور", "نظافت", "پمپ آب","متفرقه");
+var Titles = new initArray("شـارژ", "هزینه2", "3", "4", "5", "6", "7", "8", "---", "آب", "برق", "آسانسور", "نظافت", "پمپ آب", "متفرقه");
 var solarMounth = new initArray("فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند");
 var vahedBes = new initArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var num = 0;
@@ -57,10 +57,10 @@ for (i = 0; i < x.length; i++) {
 
     hlpNumber = x[i].getElementsByTagName("shr").length;
     apt.push(hlpNumber);
-    for (j = 0; j < x[i].getElementsByTagName("shr").length ; j++) {
+    for (j = 0; j < x[i].getElementsByTagName("shr").length; j++) {
         apt.push(x[i].getElementsByTagName("shr")[j].childNodes[0].nodeValue);
     }
-    
+
     hlpNumber = x[i].getElementsByTagName("c_cod").length;
     apt.push(hlpNumber);
     for (j = 0; j < hlpNumber; j++) {
@@ -77,18 +77,18 @@ for (i = 0; i < x.length; i++) {
 
 /* End Read xml***********************************************************************/
 /* Apllay shr***********************************************************************/
- 
+
 function applayShr() {
     var i, j, k, nShr;
-    var table,tableCst,tableSan,tableVah;
+    var table, tableCst, tableSan, tableVah;
     var tableTh1 = "<tr><th>تاریخ ها</th>";
-    var tableTh2 ="<tr><th>عنوان ها</th><th>بدهـکار(تومان)</th>";
+    var tableTh2 = "<tr><th>عنوان ها</th><th>بدهـکار(تومان)</th>";
     var tableTd = new initArray("<tr><td>واحد 1</td>", "<tr><td>واحد 2</td>", "<tr><td>واحد 3</td>",
         "<tr><td>واحد 4</td>", "<tr><td>واحد 5</td>", "<tr><td>واحد 6</td>", "<tr><td>واحد 7</td>",
         "<tr><td>واحد 8</td>", "<tr><td>واحد 9</td>", "<tr><td>واحد 10</td>");
     var tableTdShr = new initArray("", "", "", "", "", "", "", "", "", "");
     var vahedBed = new initArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    var sumBeds=0;
+    var sumBeds = 0;
     var today = new Date();
     var thCst = "<tr><th>تاریخ</th><th>عنوان</th><th>مبلغ</th></tr>";
     var tdCst = "";
@@ -99,7 +99,7 @@ function applayShr() {
     var sumShrAct = 0;
     var remain1401 = 3295994.7;
     var todayDate;
-     
+
 
     if (applaiedShr) { return (applaiedShr); }
 
@@ -156,18 +156,17 @@ function applayShr() {
             if (solar_year * 100 + solar_month >= apt[i]) {
                 sumShrAct = 1;
             }
-            else{
+            else {
                 sumShrAct = 0;
             }
-     
 
             for (j = 0; j < apt[i + 1]; j++) {
-                tableTh1 += "<th>" + helpDate  + "</th>";
+                tableTh1 += "<th>" + helpDate + "</th>";
                 tableTh2 += "<th>" + Titles[apt[i + j + 2]] + "</th>";
                 currentShr[j] = shrMoney(apt[i] * apt[i + j + 2]);
             }
             i = i + j + 2;
-            nShr = apt[i]/10;
+            nShr = apt[i] / 10;
             for (j = 1; j < 11; j++) {
                 for (k = 0; k < nShr; k++) {
                     ++i;
@@ -176,14 +175,16 @@ function applayShr() {
                     }
                     else {
                         tableTdShr[j] += "<td>" + apt[i] + "</td>";
-                        vahedBed[j] += currentShr[k] - apt[i];
-                        sumShr += Number(apt[i]) * sumShrAct;
+                        if (sumShrAct == 1) {
+                            vahedBed[j] += Number(currentShr[k] - apt[i]);
+                            sumShr += Number(apt[i]);
+                        }
                     }
                 }
             }
 
             i++;
-            
+
             for (j = 0; j < apt[i]; j++) {
                 if (apt[i + j + 1] > 0) {
                     usFormat = new Intl.NumberFormat().format(apt[i + j + 1 + apt[i]]);
@@ -196,7 +197,7 @@ function applayShr() {
         }
     }
 
-    table = tableTh1 + "</tr>"+tableTh2 + "</tr>";
+    table = tableTh1 + "</tr>" + tableTh2 + "</tr>";
     for (i = 1; i < 11; i++) {
         vahedBed[i] -= vahedBes[i];
         usFormat = new Intl.NumberFormat().format(vahedBed[i]);
@@ -210,14 +211,14 @@ function applayShr() {
     }
 
     document.getElementById("tshr").innerHTML = table;
- 
+
     usFormat = new Intl.NumberFormat().format(sumCst);
     tdCst += "<tr><th>جـمع کل</th><td>" + usFormat + "</td ><th>(تومان)</th></tr >";
     tableCst = thCst + tdCst;
     document.getElementById("tcst").innerHTML = tableCst;
 
     usFormat = new Intl.NumberFormat().format(remain1401);
-    tableSan = "<tr><th>مانده صندوق 1401</th><td>" + usFormat +"</td></tr>";
+    tableSan = "<tr><th>مانده صندوق 1401</th><td>" + usFormat + "</td></tr>";
     usFormat = new Intl.NumberFormat().format(sumShr);
     tableSan += "<tr><th>پرداخت واحدها</th><td>" + usFormat + "</td></tr>";
 
@@ -229,11 +230,11 @@ function applayShr() {
 
     usFormat = new Intl.NumberFormat().format(sumCst);
     tableSan += "<tr><th>جمع هزینه ها</th><td>" + usFormat + "</td></tr>";
-    usFormat = new Intl.NumberFormat().format(remain1401 + sumShr - sumCst - sumBeds);
+    usFormat = new Intl.NumberFormat().format(remain1401 + sumShr - sumCst);
     tableSan += "<tr><th>موجودی " + todayDate + "</th><td>" + usFormat + "</td><th>(تومان)</th></tr>";
 
     document.getElementById("tsan").innerHTML = tableSan;
- 
+
     applaiedShr = true;
     return (applaiedShr);
 }
@@ -253,7 +254,7 @@ function shrMoney(shrDate) {
             result = 0;
     }
 
-    return(result)
+    return (result)
 }
 
 /* End Apllay shr***********************************************************************/
@@ -294,35 +295,35 @@ function calcul_solar_date(today_date) {
 /* Simple Javascript Password***********************************************************************/
 var cipher = "U2FsdGVkX19Lw1A6D2a/0hwLO4RnQyl1gYsA3Meuu9E=";
 
-    //<!--(A) LOAD CRYPTO JS LIBRARY-- >
-    //< !--https://cryptojs.gitbook.io/docs/ -->
-    //< !--https://cdnjs.com/libraries/crypto-js -->
-    // (B) ENCRYPT & DECRYPT FUNCTIONS
-    var crypt = {
-      // (B1) THE SECRET KEY
-      secret : "CIPHERKEY",
+//<!--(A) LOAD CRYPTO JS LIBRARY-- >
+//< !--https://cryptojs.gitbook.io/docs/ -->
+//< !--https://cdnjs.com/libraries/crypto-js -->
+// (B) ENCRYPT & DECRYPT FUNCTIONS
+var crypt = {
+    // (B1) THE SECRET KEY
+    secret: "CIPHERKEY",
 
-      // (B2) ENCRYPT
-      encrypt : clear => {
+    // (B2) ENCRYPT
+    encrypt: clear => {
         var cipher = CryptoJS.AES.encrypt(clear, crypt.secret);
         return cipher.toString();
-      },
+    },
 
-      // (B3) DECRYPT
-      decrypt : cipher => {
+    // (B3) DECRYPT
+    decrypt: cipher => {
         var decipher = CryptoJS.AES.decrypt(cipher, crypt.secret);
         return decipher.toString(CryptoJS.enc.Utf8);
-      }
-    };
+    }
+};
 
-    // (C) TEST
-    // (C1) ENCRYPT CLEAR TEXT
+// (C) TEST
+// (C1) ENCRYPT CLEAR TEXT
 //    var cipher = crypt.encrypt("4321");
-  //      console.log(cipher);
-    //    alert(cipher);
+//      console.log(cipher);
+//    alert(cipher);
 
-    // (C2) DECRYPT CIPHER TEXT
-    var decipher = crypt.decrypt(cipher);
+// (C2) DECRYPT CIPHER TEXT
+var decipher = crypt.decrypt(cipher);
 //        console.log(decipher);
    //     alert(decipher);
 
