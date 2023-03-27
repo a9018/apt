@@ -104,7 +104,7 @@ function applayShr() {
     if (applaiedShr) { return (applaiedShr); }
 
     tableVah = "<tr><th>واحد</th><th>مشخصات</th><th>شماره تماس</th><th>شماره کارت-سایر</th></tr>";
-    tableVah += "<tr><th>واحد1</td><td>آقای نیکفر</td><td>0935-3295052</td><td>---</td></tr>";
+    tableVah += "<tr><th>واحد1</td><td>آقای نیکفر</td><td>0935-3295052</td><td>6037-9973-6635-1451</td></tr>";
     tableVah += "<tr><th>واحد2</td><td>آقای زهدی</td><td>0912-4776088</td><td>---</td></tr>";
 
     tableVah += "<tr><th rowspan='2'>واحد3</th>";
@@ -121,7 +121,7 @@ function applayShr() {
 
     tableVah += "<tr><th>واحد8</td><td>آقای نظام آبادی</td><td>0912-8044606</td><td>۶۰۳۷-۹۹۷۲-۸۳۳۱-۴۷۸۰</td></tr>";
     tableVah += "<tr><th>واحد9</td><td>آقای کاظمی</td><td>0930-2022452</td><td>6395-9911-9372-2568</td></tr>";
-    tableVah += "<tr><th>واحد10</td><td>خانم کاظمی</td><td>099-12108643</td><td>---</td></tr>";
+    tableVah += "<tr><th>واحد10</td><td>خانم کاظمی</td><td>099-12108643</td><td>6037-9973-5671-5442</td></tr>";
     tableVah += "<tr><th>درب برقی</td><td>آقای مهربانی</td><td>0912-7926168</td><td>---</td></tr>";
     tableVah += "<tr><th>پمپ آب</td><td>آقای گنجعلی</td><td>0912-1002328</td><td>---</td></tr>";
 
