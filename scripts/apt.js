@@ -105,7 +105,7 @@ function applayShr() {
 
     tableVah = "<tr><th>واحد</th><th>مشخصات</th><th>شماره تماس</th><th>شماره کارت-سایر</th></tr>";
     tableVah += "<tr><th>واحد1</td><td>آقای نیکفر</td><td>0935-3295052</td><td>6037-9973-6635-1451</td></tr>";
-    tableVah += "<tr><th>واحد2</td><td>آقای زهدی</td><td>0912-4776088</td><td>---</td></tr>";
+    tableVah += "<tr><th>واحد2</td><td>خانم زهدی</td><td>0912-4776088</td><td>۵۸۹۲-۱۰۱۴-۰۶۰۸-۹۵۹۵</td></tr>";
 
     tableVah += "<tr><th rowspan='2'>واحد3</th>";
     tableVah += "<td>آقای بصیری(مالک)</td><td>0912-5190161</td><td>---</td></tr>";
