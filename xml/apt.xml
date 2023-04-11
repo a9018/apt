@@ -38,11 +38,13 @@
     <c_cod>14</c_cod> /// پمپ آب
     <c_cod>12</c_cod> /// آسانسور
     <c_cod>16</c_cod> /// درب پارکینگ
+    <c_cod>13</c_cod> /// نظافت
     <cst>298400</cst>
     <cst>26000</cst>
     <cst>1028000</cst>
     <cst>400000</cst>
     <cst>120000</cst>
     <cst>50000</cst>
+    <cst>200000</cst>
   </date>
 </apt>
