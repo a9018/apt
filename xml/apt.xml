@@ -36,10 +36,12 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>13</c_cod> /// نظافت
     <c_cod>16</c_cod> /// درب پارکینگ
+    <c_cod>11</c_cod> ///برق
     <cst>10000</cst>
     <cst>458900</cst>
     <cst>200000</cst>
     <cst>260000</cst>
+    <cst>128900</cst>
   </date>
   <date id="140201">
     <s_cod>1</s_cod>
