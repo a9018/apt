@@ -32,10 +32,12 @@
     <v10>
       <shr>150000</shr>
     </v10>
+    <c_cod>10</c_cod> ///آب
     <c_cod>18</c_cod> ///روشنایی
     <c_cod>17</c_cod> ///روشنایی    
     <c_cod>11</c_cod> ///برق    
     <c_cod>14</c_cod> /// پمپ آب
+    <cst>1240100</cst>
     <cst>50000</cst>
     <cst>270000</cst>
     <cst>131700</cst>
