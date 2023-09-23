@@ -20,47 +20,47 @@
             /*            font-weight: bold;   */
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="scripts/code.jquery.com_jquery-3.7.1.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
-<body id="home">
-    <script lang="javascript">
-        (function () {
-            if (window.localStorage) {
-                if (!localStorage.getItem('firstLoad')) {
-                    localStorage['firstLoad'] = true;
-                    window.location.reload();
+    <body id="home">
+        <script lang="javascript">
+            (function () {
+                if (window.localStorage) {
+                    if (!localStorage.getItem('firstLoad')) {
+                        localStorage['firstLoad'] = true;
+                        window.location.reload();
+                    }
+                    else
+                        localStorage.removeItem('firstLoad');
                 }
-                else
-                    localStorage.removeItem('firstLoad');
-            }
-        })();
-    </script>
-    <div  id="start">
-        << گزارش های آپارتمان >>
-    </div>
-    <form name="form1">
-        <section id="etl" class="myMenu">اطلاعیه</section>
-        <section id="shr" class="myMenu">شارژ</section>
-        <section id="haz" class="myMenu">هزینه</section>
-        <section id="san" class="myMenu">صندوق</section>
-    </form>
+            })();
+        </script>
+        <div  id="start">
+            << گزارش های آپارتمان >>
+        </div>
+        <form name="form1">
+            <section id="etl" class="myMenu">اطلاعیه</section>
+            <section id="shr" class="myMenu">شارژ</section>
+            <section id="haz" class="myMenu">هزینه</section>
+            <section id="san" class="myMenu">صندوق</section>
+        </form>
 
-    <div id="passCode">
-        <br>
-        <label for="pass">کلمه عبور:</label>
-        <input type="password" id="pass" name="password" size="8">
-        <button id="ok">تایید</button>
-    </div>
+        <div id="passCode">
+            <br>
+            <label for="pass">کلمه عبور:</label>
+            <input type="password" id="pass" name="password" size="8">
+            <button id="ok">تایید</button>
+        </div>
 
-    <div id="ETL">
-        <br />
-        <a href="files/Etl-14020630.pdf">مورخ 1402/06/30: <span class="myBold">گزارش </span>ششماه اول سال 1402<span class="myBold">صندوق</span></a><br /><br />
-        <a href="files/Etl-14011216.pdf">مورخ 1401/12/16: <span class="myBold">مدیریت جدید</span> و تغییر <span class="myBold">شماره کارت</span> واریزی به صندوق</a><br /><br />
-        <!--        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/01/15 (مدیریت جدید)</a><br /><br />
-            <a href="files/a.pdf" class="ETL">اطلاعیه</a><br /><br />
-            <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/03/15</a><br /><br />
-    -->
+        <div id="ETL">
+            <br />
+            <a href="files/Etl-14020630.pdf">مورخ 1402/06/30: <span class="myBold">گزارش </span>ششماه اول سال 1402<span class="myBold">صندوق</span></a><br /><br />
+            <a href="files/Etl-14011216.pdf">مورخ 1401/12/16: <span class="myBold">مدیریت جدید</span> و تغییر <span class="myBold">شماره کارت</span> واریزی به صندوق</a><br /><br />
+            <!--        <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/01/15 (مدیریت جدید)</a><br /><br />
+                <a href="files/a.pdf" class="ETL">اطلاعیه</a><br /><br />
+                <a href="files/a.pdf" class="ETL">اطلاعیه مورخ 1402/03/15</a><br /><br />
+        -->
     </div>
     <div id="SHR">
         <img src="images\inf.png" alt="******">
@@ -153,14 +153,14 @@
         });
 
         $("img").click(function () {
-            
+
             if ($("#passCode").first().is(":hidden")) {
                 $("img").animate({ "margin-right": '-=450' }, 1000);
                 $("#passCode").slideDown("slow");
                 $("img").fadeTo(1000, 0.3);
             } else {
                 $("img").animate({ "margin-right": '+=450' }, 1000);
-//                $("#passCode").slideUp("slow");
+                //                $("#passCode").slideUp("slow");
                 $("#passCode").hide("slow");
                 $("img").fadeTo(1000, 1);
             }
@@ -168,7 +168,7 @@
 
         $("#ok").click(function () {
             if (document.getElementById("pass").value == crypt.decrypt(cipher)) {
-//                alert(document.getElementById("pass").value);
+                //                alert(document.getElementById("pass").value);
                 $("#passCode").hide();
                 $("div").hide();
                 $("#VAH").slideDown("slow");
@@ -187,5 +187,5 @@
 
 
     <script type="text/javascript" src="scripts/apt.js" charset="UTF-8"></script>
-</body>
+    </body>
 </html>
