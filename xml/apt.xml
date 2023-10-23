@@ -1,5 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <apt>
+  <date id="140208">
+    <s_cod>1</s_cod>
+    <v01>
+      <shr>0</shr>
+    </v01>
+    <v02>
+      <shr>150000</shr>
+    </v02>
+    <v03>
+      <shr>0</shr>
+    </v03>
+    <v04>
+      <shr>9</shr>
+    </v04>
+    <v05>
+      <shr>150000</shr>
+    </v05>
+    <v06>
+      <shr>0</shr>
+    </v06>
+    <v07>
+      <shr>0</shr>
+    </v07>
+    <v08>
+      <shr>0</shr>
+    </v08>
+    <v09>
+      <shr>0</shr>
+    </v09>
+    <v10>
+      <shr>0</shr>
+    </v10>
+  </date>
   <date id="140207">
     <s_cod>1</s_cod>
     <v01>
@@ -32,7 +65,9 @@
     <v10>
       <shr>150000</shr>
     </v10>
+    <c_cod>15</c_cod> ///متفرقه
     <c_cod>13</c_cod> /// نظافت
+    <cst>50000</cst>
     <cst>200000</cst>  
   </date>    
   <date id="140206">
