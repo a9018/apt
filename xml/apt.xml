@@ -32,6 +32,8 @@
     <v10>
       <shr>150000</shr>
     </v10>
+    <c_cod>10</c_cod> ///آب
+    <cst>1297500</cst>
   </date>
   <date id="140207">
     <s_cod>1</s_cod>
