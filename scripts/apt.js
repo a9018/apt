@@ -238,13 +238,18 @@ function applayShr() {
     applaiedShr = true;
     return (applaiedShr);
 }
+/* End Apllay shr***********************************************************************/
+/* shrMoney***********************************************************************/
 
 function shrMoney(shrDate) {
     var result = 0;
 
     switch (true) {
-        case shrDate < 280402:
+        case shrDate < 140210:
             result = 150000;
+            break;
+        case shrDate < 999999:
+            result = 200000;
             break;
         case shrDate == 280406: // Test
             result = 0;
@@ -256,8 +261,8 @@ function shrMoney(shrDate) {
 
     return (result)
 }
+/* End shrMoney***********************************************************************/
 
-/* End Apllay shr***********************************************************************/
 
 /* Solar Date***********************************************************************/
 function calcul_solar_date(today_date) {
@@ -291,6 +296,8 @@ function calcul_solar_date(today_date) {
     solar_day = days
 
 }
+/* End Solar Date***********************************************************************/
+
 
 /* Simple Javascript Password***********************************************************************/
 var cipher = "U2FsdGVkX19Lw1A6D2a/0hwLO4RnQyl1gYsA3Meuu9E=";
