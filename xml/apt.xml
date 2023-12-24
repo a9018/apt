@@ -18,13 +18,13 @@
       <shr>200000</shr>
     </v05>
     <v06>
-      <shr>0</shr>
+      <shr>200000</shr>
     </v06>
     <v07>
       <shr>0</shr>
     </v07>
     <v08>
-      <shr>0</shr>
+      <shr>200000</shr>
     </v08>
     <v09>
       <shr>200000</shr>
@@ -32,6 +32,8 @@
     <v10>
       <shr>0</shr>
     </v10>
+    <c_cod>11</c_cod> ///برق
+    <cst>106600</cst>
   </date>  
 <date id="140209">
     <s_cod>1</s_cod>
