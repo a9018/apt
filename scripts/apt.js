@@ -13,7 +13,7 @@ function initArray() {
         this[i + 1] = initArray.arguments[i]
 }
 
-var Titles = new initArray("شـارژ", "آسانسور", "3", "4", "5", "6", "7", "8", "---", "آب", "برق", "آسانسور", "نظافت", "پمپ آب", "متفرقه","درب پارکینگ","روشنایی","اتصالات آب","آنتن مرکزی");
+var Titles = new initArray("شـارژ", "آسانسور", "3", "4", "5", "6", "7", "8", "---", "آب", "برق", "آسانسور", "نظافت", "پمپ آب", "متفرقه","درب پارکینگ","روشنایی","اتصالات آب","آنتن مرکزی","کودوخاک");
 var solarMounth = new initArray("فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند");
 var vahedBes = new initArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 var num = 0;
@@ -243,7 +243,7 @@ function applayShr() {
 
 function shrMoney(shrDate) {
     var result = 0;
-
+ //   alert(shrDate);
     switch (true) {
         case shrDate < 140210:
             result = 150000;
@@ -253,6 +253,7 @@ function shrMoney(shrDate) {
             break;
         case shrDate < 999999:
             result = 200000;
+//            alert(shrDate);
             break;
         default:
             result = 0;
