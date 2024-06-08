@@ -32,9 +32,11 @@
     <v10>
       <shr>00000</shr>
     </v10>
+    <c_cod>13</c_cod> /// نظافت
     <c_cod>11</c_cod> ///برق
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
+    <cst>450000</cst>
     <cst>95000</cst>
     <cst>336800</cst>
     <cst>200000</cst>
