@@ -32,8 +32,10 @@
     <v10>
       <shr>00000</shr>
     </v10>
-   <c_cod>12</c_cod> /// آسانسور
-   <cst>550000</cst>
+    <c_cod>11</c_cod> ///برق
+    <c_cod>12</c_cod> /// آسانسور
+    <cst>42900</cst>
+    <cst>550000</cst>
   </date>
   <date id="140303">
     <s_cod>1</s_cod>
