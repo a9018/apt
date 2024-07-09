@@ -32,8 +32,12 @@
     <v10>
       <shr>00000</shr>
     </v10>
+    <c_cod>13</c_cod> /// نظافت
+    <c_cod>10</c_cod> ///آب
     <c_cod>11</c_cod> ///برق
     <c_cod>12</c_cod> /// آسانسور
+    <cst>400000</cst>
+    <cst>686300</cst>
     <cst>42900</cst>
     <cst>550000</cst>
   </date>
