@@ -32,12 +32,14 @@
     <v10>
       <shr>200000</shr>
     </v10>
+    <c_cod>10</c_cod> ///آب
     <c_cod>11</c_cod> ///برق
     <c_cod>12</c_cod> /// آسانسور
     <c_cod>13</c_cod> /// نظافت
     <c_cod>14</c_cod> /// پمپ آب
     <c_cod>19</c_cod> ///آنتن مرکزی
     <c_cod>11</c_cod> ///برق
+    <cst>1743000</cst>
     <cst>104400</cst>
     <cst>350000</cst>
     <cst>400000</cst>
