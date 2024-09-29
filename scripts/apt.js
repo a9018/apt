@@ -251,8 +251,11 @@ function shrMoney(shrDate) {
         case shrDate == 280424: // آسانسور140212
             result = 200000;
             break;
-        case shrDate < 999999:
+        case shrDate < 140307:
             result = 200000;
+            break;
+        case shrDate < 999999:
+            result = 250000;
 //            alert(shrDate);
             break;
         default:
