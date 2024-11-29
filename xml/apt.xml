@@ -3,7 +3,7 @@
   <date id="140309">
     <s_cod>1</s_cod>
     <v01>
-      <shr>000</shr>
+      <shr>250000</shr>
     </v01>
     <v02>
       <shr>250000</shr>
@@ -21,7 +21,7 @@
       <shr>250000</shr>
     </v06>
     <v07>
-      <shr>000</shr>
+      <shr>250000</shr>
     </v07>
     <v08>
       <shr>250000</shr>
@@ -32,6 +32,12 @@
     <v10>
       <shr>000</shr>
     </v10>
+    <c_cod>12</c_cod> /// آسانسور
+    <c_cod>14</c_cod> /// پمپ آب
+    <c_cod>17</c_cod> ///روشنایی
+    <cst>200000</cst>
+    <cst>650000</cst>
+    <cst>45000</cst>
   </date>  
   <date id="140308">
     <s_cod>1</s_cod>
