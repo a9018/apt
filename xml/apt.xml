@@ -119,8 +119,8 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <cst>0</cst>
-    <cst>0</cst>
-    <cst>0</cst>
+    <cst>400000</cst>
+    <cst>1375600</cst>
     <cst>0</cst>
   </date>  
   <date id="140309">
