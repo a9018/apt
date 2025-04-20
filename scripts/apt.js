@@ -136,7 +136,7 @@ function applayShr() {
 
 
 
-
+    /*
     calcul_solar_date(today);
     if (solar_year > 99) {
         solar_year = 1400 + solar_year % 100;
@@ -144,7 +144,14 @@ function applayShr() {
     else {
         solar_year += 1300;
     }
-    todayDate = solar_year + "/" + solar_month + "/" + solar_day;
+    todayDate = solar_year + "/" + solar_month + "/" + solar_day; */
+    /**  tojalali ********************/ 
+    const jalaliNow = toJalali(today);
+    todayDate = jalaliNow.toString();
+    solar_year = jalaliNow.year;
+    solar_month = jalaliNow.month;
+    solar_day = jalaliNow.day;
+    /******************************** */
     tableTh1 += "<th>" + todayDate + "</th>";
 
 
@@ -272,36 +279,87 @@ function shrMoney(shrDate) {
 
 /* Solar Date***********************************************************************/
 function calcul_solar_date(today_date) {
-    var days = 0
-    var kabiseh = 0
-    var i = 0
+    var days = 0;
+    var kabiseh = 0;
+    var i = 0;
 
-    days = Math.ceil((today_date.getTime() / msPerDay)) + 286
-    solar_year = 48
+    days = Math.ceil((today_date.getTime() / msPerDay)) + 286;
+    solar_year = 48;
     for (i = 1; i < 1000; i++) {
         if (i % 4 == 0)
-            kabiseh = 1
+            kabiseh = 1;
         else
-            kabiseh = 0
+            kabiseh = 0;
 
         if (days > 365 + kabiseh) {
-            solar_year += 1
-            days -= 365 + kabiseh
+            solar_year += 1;
+            days -= (365 + kabiseh);
         }
         else
-            break
+            break;
     }
 
-    solar_month = 0
+    /* Debug */
+        alert(days);
+
+    /************************* */
+
+    solar_month = 0;
     for (i = 1; i <= 12; i++) {
         if (solar_days_of_month[i] < days) {
-            solar_month += 1
-            days -= solar_days_of_month[i]
+            solar_month += 1;
+            days -= solar_days_of_month[i];
         }
     }
-    solar_day = days
+    solar_day = days;
 
 }
+
+
+function toJalali(date) {
+    if (!(date instanceof Date)) {
+        throw new Error('ورودی باید از نوع Date باشد');
+    }
+
+    const gy = date.getFullYear();
+    const gm = date.getMonth() + 1;
+    const gd = date.getDate();
+
+    return gregorianToJalali(gy, gm, gd);
+}
+
+function gregorianToJalali(gy, gm, gd) {
+    const g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    const gy2 = (gm > 2) ? (gy + 1) : gy;
+    const days = 355666 + (365 * gy) + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400) + gd + g_d_m[gm - 1];
+    let jy = -1595 + (33 * Math.floor(days / 12053));
+    let daysLeft = days % 12053;
+    jy += 4 * Math.floor(daysLeft / 1461);
+    daysLeft %= 1461;
+
+    if (daysLeft > 365) {
+        jy += Math.floor((daysLeft - 1) / 365);
+        daysLeft = (daysLeft - 1) % 365;
+    }
+
+    const jm = (daysLeft < 186) ? 1 + Math.floor(daysLeft / 31) : 7 + Math.floor((daysLeft - 186) / 30);
+    const jd = 1 + ((daysLeft < 186) ? (daysLeft % 31) : ((daysLeft - 186) % 30));
+
+    return {
+        year: jy,
+        month: jm,
+        day: jd,
+        toString: function () {
+            return `${jy}/${jm.toString().padStart(2, '0')}/${jd.toString().padStart(2, '0')}`;
+        }
+    };
+}
+
+// مثال استفاده
+//const now = new Date();
+//const jalaliNow = toJalali(now);
+//console.log(jalaliNow.toString()); // مثال: 1402/05/15
+//console.log(`سال: ${jalaliNow.year}, ماه: ${jalaliNow.month}, روز: ${jalaliNow.day}`);
 /* End Solar Date***********************************************************************/
 
 
