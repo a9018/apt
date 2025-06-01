@@ -3,13 +3,13 @@
   <date id="140403">
     <s_cod>1</s_cod>
     <v01>
-      <shr>0000</shr>
+      <shr>250000</shr>
     </v01>
     <v02>
       <shr>250000</shr>
     </v02>
     <v03>
-      <shr>0000</shr>
+      <shr>250000</shr>
     </v03>
     <v04>
       <shr>250000</shr>
@@ -38,7 +38,7 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <cst>0</cst>
-    <cst>0</cst>
+    <cst>134800</cst>
     <cst>0</cst>
     <cst>0</cst>
     <cst>0</cst>
