@@ -1,5 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <apt>
+  <date id="140404">
+    <s_cod>1</s_cod>
+    <v01>
+      <shr>0000</shr>
+    </v01>
+    <v02>
+      <shr>0000</shr>
+    </v02>
+    <v03>
+      <shr>0000</shr>
+    </v03>
+    <v04>
+      <shr>250000</shr>
+    </v04>
+    <v05>
+      <shr>250000</shr>
+    </v05>
+    <v06>
+      <shr>0000</shr>
+    </v06>
+    <v07>
+      <shr>0000</shr>
+    </v07>
+    <v08>
+      <shr>0000</shr>
+    </v08>
+    <v09>
+      <shr>0000</shr>
+    </v09>
+    <v10>
+      <shr>0000</shr>
+    </v10>
+    <c_cod>14</c_cod> /// پمپ آب
+    <c_cod>11</c_cod> ///برق
+    <c_cod>13</c_cod> /// نظافت
+    <c_cod>10</c_cod> ///آب
+    <c_cod>12</c_cod> /// آسانسور
+    <cst>0</cst>
+    <cst>00</cst>
+    <cst>0000</cst>
+    <cst>00</cst>
+    <cst>00000</cst>
+  </date>  
   <date id="140403">
     <s_cod>1</s_cod>
     <v01>
@@ -32,12 +75,10 @@
     <v10>
       <shr>250000</shr>
     </v10>
-    <c_cod>14</c_cod> /// پمپ آب
     <c_cod>11</c_cod> ///برق
     <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
-    <cst>0</cst>
     <cst>134800</cst>
     <cst>450000</cst>
     <cst>1412200</cst>
