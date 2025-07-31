@@ -30,7 +30,7 @@
       <shr>250000</shr>
     </v09>
     <v10>
-      <shr>0000</shr>
+      <shr>250000</shr>
     </v10>
     <c_cod>14</c_cod> /// پمپ آب
     <c_cod>11</c_cod> ///برق
@@ -38,7 +38,7 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <cst>00000</cst>
-    <cst>00</cst>
+    <cst>231900</cst>
     <cst>0000</cst>
     <cst>00</cst>
     <cst>00000</cst>
