@@ -37,11 +37,11 @@
     <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
-    <cst>00000</cst>
+    <cst>700000</cst>
     <cst>172500</cst>
     <cst>500000</cst>
     <cst>1732000</cst>
-    <cst>00000</cst>
+    <cst>500000</cst>
   </date>
   <date id="140405">
     <s_cod>1</s_cod>
