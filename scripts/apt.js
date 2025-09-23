@@ -136,7 +136,7 @@ function applayShr() {
 
 
 
-    /*
+    
     calcul_solar_date(today);
     if (solar_year > 99) {
         solar_year = 1400 + solar_year % 100;
@@ -144,8 +144,8 @@ function applayShr() {
     else {
         solar_year += 1300;
     }
-    todayDate = solar_year + "/" + solar_month + "/" + solar_day; */
-    /**  tojalali ********************/ 
+    todayDate = solar_year + "/" + solar_month + "/" + solar_day; 
+    /**  tojalali ******************** 
     const jalaliNow = toJalali(today);
     todayDate = jalaliNow.toString();
     solar_year = jalaliNow.year;
@@ -264,9 +264,12 @@ function shrMoney(shrDate) {
         case shrDate == 420933: // پمپ آب 140311  
             result = 1150000;
             break;
-        case shrDate < 999999:
+        case shrDate < 140407:
             result = 250000;
-//            alert(shrDate);
+            break;
+        case shrDate < 999999:
+            result = 300000;
+            //            alert(shrDate);
             break;
         default:
             result = 0;
@@ -299,20 +302,19 @@ function calcul_solar_date(today_date) {
             break;
     }
 
-    /* Debug */
+    /* Debug 
         alert(days);
-
-    /************************* */
+     /************************* */
 
     solar_month = 0;
     for (i = 1; i <= 12; i++) {
         if (solar_days_of_month[i] < days) {
-            solar_month += 1;
             days -= solar_days_of_month[i];
         }
+        else break;  
+        solar_month += 1;
     }
     solar_day = days;
-
 }
 
 
