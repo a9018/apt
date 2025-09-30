@@ -21,7 +21,7 @@
       <shr>0000</shr>
     </v06>
     <v07>
-      <shr>0000</shr>
+      <shr>300000</shr>
     </v07>
     <v08>
       <shr>0000</shr>
@@ -30,7 +30,7 @@
       <shr>300000</shr>
     </v09>
     <v10>
-      <shr>0000</shr>
+      <shr>300000</shr>
     </v10>
     <c_cod>14</c_cod> /// پمپ آب
     <c_cod>11</c_cod> ///برق
@@ -38,9 +38,9 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <cst>00000</cst>
-    <cst>00</cst>
+    <cst>260100</cst>
     <cst>00000</cst>
-    <cst>000</cst>
+    <cst>2355100</cst>
     <cst>00000</cst>
   </date>
   <date id="140406">
