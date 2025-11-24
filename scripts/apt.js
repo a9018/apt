@@ -4,7 +4,7 @@ var solar_year = 0
 var solar_month = 0
 var solar_day = 0
 var solar_days_of_month = new initArray(0, 31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30);
-var bedClass;
+var bedClass = "";
 var applaiedShr = false;
 
 function initArray() {
@@ -208,7 +208,7 @@ function applayShr() {
     for (i = 1; i < 11; i++) {
         vahedBed[i] -= vahedBes[i];
         usFormat = new Intl.NumberFormat().format(vahedBed[i]);
-        if (vahedBed[i] == 0) {
+        if (vahedBed[i] <= 0) {
             bedClass = "<td>";
         }
         else {
