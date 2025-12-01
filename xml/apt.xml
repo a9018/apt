@@ -4,8 +4,8 @@
     <s_cod>1</s_cod>
     <s_cod>4</s_cod>
     <v01>
-      <shr>00000</shr>
-      <shr>0000</shr>
+      <shr>300000</shr>
+      <shr>120000</shr>
     </v01>
     <v02>
       <shr>300000</shr>
@@ -50,7 +50,7 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <c_cod>19</c_cod> /// آنتن مرکزی
-    <cst>65000</cst>
+    <cst>425000</cst>
     <cst>00000</cst>
     <cst>203400</cst>
     <cst>00000</cst>
