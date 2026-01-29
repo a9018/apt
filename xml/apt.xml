@@ -1,5 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <apt>
+  <date id="140411">
+    <s_cod>1</s_cod>
+       <v01>
+      <shr>00000</shr>
+    </v01>
+    <v02>
+      <shr>300000</shr>
+    </v02>
+    <v03>
+      <shr>00000</shr>
+    </v03>
+    <v04>
+      <shr>00000</shr>
+    </v04>
+    <v05>
+      <shr>300000</shr>
+    </v05>
+    <v06>
+      <shr>300000</shr>
+    </v06>
+    <v07>
+      <shr>300000</shr>
+    </v07>
+    <v08>
+      <shr>300000</shr>
+    </v08>
+    <v09>
+      <shr>250000</shr>
+    </v09>
+    <v10>
+      <shr>300000</shr>
+    </v10>
+    <c_cod>11</c_cod> ///برق
+    <c_cod>13</c_cod> /// نظافت
+    <c_cod>10</c_cod> ///آب
+    <c_cod>12</c_cod> /// آسانسور
+    <cst>00</cst>
+    <cst>00000</cst>
+    <cst>00</cst>
+    <cst>00000</cst>
+  </date>
   <date id="140410">
     <s_cod>1</s_cod>
     <s_cod>5</s_cod>
@@ -44,13 +85,11 @@
       <shr>75000</shr>
     </v10>
     <c_cod>11</c_cod> ///برق
-    <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <cst>173500</cst>
-    <cst>00000</cst>
-    <cst>00</cst>
-    <cst>0000</cst>
+    <cst>1294400</cst>
+    <cst>500000</cst>
   </date>  
   <date id="140409">
     <s_cod>1</s_cod>
@@ -98,14 +137,12 @@
     <c_cod>17</c_cod> ///روشنایی
     <c_cod>14</c_cod> /// پمپ آب
     <c_cod>11</c_cod> ///برق
-    <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
     <c_cod>19</c_cod> /// آنتن مرکزی
     <cst>425000</cst>
     <cst>900000</cst>
     <cst>203400</cst>
-    <cst>00000</cst>
     <cst>1421000</cst>
     <cst>801800</cst>
     <cst>1200000</cst>
