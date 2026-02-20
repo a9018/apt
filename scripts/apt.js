@@ -273,6 +273,9 @@ function shrMoney(shrDate) {
         case shrDate == 702050: // خرید لامپ و روغن آسانسور 140410  
             result = 75000;
             break;
+        case shrDate == 280824: // آسانسور140412
+            result = 75000;
+            break;
         case shrDate < 999999:
             result = 300000;
             //            alert(shrDate);
