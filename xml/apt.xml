@@ -8,8 +8,8 @@
       <shr>00000</shr>
     </v01>
     <v02>
-      <shr>00000</shr>
-      <shr>00000</shr>
+      <shr>300000</shr>
+      <shr>75000</shr>
     </v02>
     <v03>
       <shr>00000</shr>
@@ -24,16 +24,16 @@
       <shr>75000</shr>
     </v05>
     <v06>
-      <shr>00000</shr>
-      <shr>00000</shr>
+      <shr>300000</shr>
+      <shr>75000</shr>
     </v06>
     <v07>
       <shr>00000</shr>
       <shr>00000</shr>
     </v07>
     <v08>
-      <shr>00000</shr>
-      <shr>00000</shr>
+      <shr>300000</shr>
+      <shr>75000</shr>
     </v08>
     <v09>
       <shr>0000</shr>
@@ -47,12 +47,13 @@
     <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
+    <c_cod>14</c_cod> /// پمپ آب
     <cst>00</cst>
     <cst>0000</cst>
     <cst>00</cst>
     <cst>0000</cst>
+    <cst>1200000</cst>
   </date>
-
   <date id="140411">
     <s_cod>1</s_cod>
        <v01>
