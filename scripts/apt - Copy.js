@@ -144,17 +144,14 @@ function applayShr() {
     else {
         solar_year += 1300;
     }
-
-    /**  tojalali ********************/
+    todayDate = solar_year + "/" + solar_month + "/" + solar_day; 
+    /**  tojalali ******************** 
     const jalaliNow = toJalali(today);
     todayDate = jalaliNow.toString();
     solar_year = jalaliNow.year;
     solar_month = jalaliNow.month;
     solar_day = jalaliNow.day;
     /******************************** */
-
-    todayDate = solar_year + "/" + solar_month + "/" + solar_day; 
-
     tableTh1 += "<th>" + todayDate + "</th>";
 
 
