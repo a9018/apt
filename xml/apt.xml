@@ -27,7 +27,7 @@
       <shr>00000</shr>
     </v08>
     <v09>
-      <shr>00000</shr>
+      <shr>600000</shr>
     </v09>
     <v10>
       <shr>600000</shr>
@@ -36,11 +36,9 @@
     <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
-    <c_cod>14</c_cod> /// پمپ آب
     <cst>00</cst>
     <cst>000</cst>
     <cst>00</cst>
-    <cst>00000</cst>
     <cst>00000</cst>
   </date>
   <date id="140504">
