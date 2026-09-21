@@ -36,10 +36,12 @@
     <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
+    <c_cod>14</c_cod> /// پمپ آب
     <cst>350300</cst>
     <cst>1500000</cst>
     <cst>3286600</cst>
-    <cst>0000</cst>
+    <cst>850000</cst>
+    <cst>1700000</cst>
   </date>  
   <date id="140505">
     <s_cod>1</s_cod>
