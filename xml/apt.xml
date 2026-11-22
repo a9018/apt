@@ -1,5 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <apt>
+  <date id="140509">
+    <s_cod>1</s_cod>
+    <s_cod>3</s_cod>
+    <v01>
+      <shr>00000</shr>
+      <shr>000</shr>
+    </v01>
+    <v02>
+      <shr>600000</shr>
+      <shr>150000</shr>
+    </v02>
+    <v03>
+      <shr>00000</shr>
+      <shr>000</shr>
+    </v03>
+    <v04>
+      <shr>00000</shr>
+      <shr>000</shr>
+    </v04>
+    <v05>
+      <shr>600000</shr>
+      <shr>150000</shr>
+    </v05>
+    <v06>
+      <shr>00000</shr>
+      <shr>0000</shr>
+    </v06>
+    <v07>
+      <shr>00000</shr>
+      <shr>000</shr>
+    </v07>
+    <v08>
+      <shr>00000</shr>
+      <shr>0000</shr>
+    </v08>
+    <v09>
+      <shr>00000</shr>
+      <shr>150000</shr>
+    </v09>
+    <v10>
+      <shr>00000</shr>
+      <shr>000</shr>
+    </v10>
+    <c_cod>11</c_cod> ///برق
+    <c_cod>13</c_cod> /// نظافت
+    <c_cod>10</c_cod> ///آب
+    <c_cod>12</c_cod> /// آسانسور
+    <c_cod>18</c_cod> /// شیرآب
+    <cst>0</cst>
+    <cst>0</cst>
+    <cst>0</cst>
+    <cst>00000</cst>
+    <cst>1500000</cst>
+  </date>
   <date id="140508">
     <s_cod>1</s_cod>
     <v01>
@@ -337,9 +391,11 @@
     <c_cod>13</c_cod> /// نظافت
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
+    <c_cod>6</c_cod> /// عیدی
     <cst>100000</cst>
     <cst>3043200</cst>
     <cst>850000</cst>
+    <cst>1000000</cst>
   </date>
   <date id="140412">
     <s_cod>1</s_cod>
@@ -480,9 +536,11 @@
     <c_cod>11</c_cod> ///برق
     <c_cod>10</c_cod> ///آب
     <c_cod>12</c_cod> /// آسانسور
+    <c_cod>5</c_cod> /// متفرقه
     <cst>173500</cst>
     <cst>1294400</cst>
     <cst>500000</cst>
+    <cst>750000</cst>
   </date>  
   <date id="140409">
     <s_cod>1</s_cod>
@@ -1436,10 +1494,12 @@
     <c_cod>10</c_cod> ///آب
     <c_cod>11</c_cod> ///برق
     <c_cod>14</c_cod> /// پمپ آب
+    <c_cod>2</c_cod> /// آسانسور
     <cst>900000</cst>
     <cst>474400</cst>
     <cst>187600</cst>
     <cst>450000</cst>
+    <cst>2000000</cst>
   </date>
   <date id="140211">
     <s_cod>1</s_cod>
